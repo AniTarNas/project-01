@@ -1,0 +1,31 @@
+.whiteButton{
+	display:inline-block;
+	font-size: 15px;
+    white-space: nowrap;
+    font-family: TitilliumWeb,sans-serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    color: #808285;
+    background-color: white;
+    border: 3px solid #00b3b7;
+    border-radius: 25px;
+    height: 48px;
+    width: 200px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+
+    &:hover{
+    	transform:scale(1.03);
+    	background-color: #00b3b7;
+    	color:white;
+    }
+
+  .whiteButton__text{
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+    }
+}

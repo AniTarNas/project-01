@@ -1,0 +1,45 @@
+@mixin flex_space_between{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+@mixin flex_space_between_center{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+}
+
+@mixin flex_space_around_center{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	align-items:center;
+}
+
+@mixin flex_space_around{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+
+@mixin flex_row_nowrap{
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+}
+
+@mixin flex_itemsCenter{
+	display:flex;
+	align-items:center;
+}
+
+@mixin flex_row_center{
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+}

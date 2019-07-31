@@ -1,0 +1,237 @@
+nav{
+	width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    border-bottom: 2px solid #ededed;
+    background-color: white;
+
+	.content{
+		margin:auto;
+		max-width:90%;
+		width:1900px;
+		display: flex;
+		flex-direction:row;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo_burger_flex{
+			display: flex;
+			flex-direction:row;
+			justify-content: space-between;
+			align-items:center;
+
+			.logo a img{
+				max-width: 170px;
+				max-height:80px;
+				height:50px;
+				width:auto;
+			}
+
+			.burger{
+				display:none;
+
+				cursor: pointer;
+  				padding: 16px 0;
+				span {
+				    position: relative;
+				    display: block;
+				    width: $burger_width;
+				    height: $burger_height;
+				    background: $burger_color;
+				    transition: all .2s ease-in-out;
+				    
+				    &:before, &:after {
+				      position: absolute;
+				      background: $burger_color;
+				      content: '';
+				      width: $burger_width;
+				      height: $burger_height;
+				      transition: all .2s ease-in-out;
+				    }
+				    
+				    &:before {
+				      top: -8px;
+				    }
+				    
+				    &:after {
+				      top: 8px;
+				    }
+				  }
+				}
+
+				div.active {
+				  span {
+				    background: transparent;  
+				    
+				    &:before {
+				      transform: rotate(405deg) translate(5px, 6px);
+				    }
+
+				    &:after {
+				      transform: rotate(-45deg) translate(5px, -6px);
+				    }
+				  }
+
+			}
+		}
+		.menu_icon{
+			display: flex;
+			flex-direction:row;
+			align-items:center;
+		
+		.menu_icon_flex{
+			display:flex;
+			flex-direction:row;
+			align-items:center;
+			
+			>li{
+				position:relative;
+				z-index:100;
+
+				&:hover>ul{
+					opacity:1;
+					top:100%;
+				}
+			}
+			>li>a{
+				white-space:nowrap;
+				font-size:$menu_font_size;
+				display: inline-block;
+				color:currentColor;
+				text-transform: uppercase;
+				padding:$menu_item_vertical_padding $menu_item_horizontal_padding;
+				transition: $transition_function;
+
+				&:hover{
+					color:$main-site-color;
+				}
+			}
+			>li>ul{
+				z-index:10;
+				top:-200px;
+				background-color:white;
+				width:auto;
+				min-width:100%;
+				position:absolute;
+				border-top: 2px solid #9e9e9e;
+				transition: $transition_function;
+
+				>li>a{
+					color:inherit;
+					text-transform:uppercase;
+					font-size:$menu_font_size;
+					display: inline-block;
+					width:auto;
+					min-width:100%;
+					white-space:nowrap;
+					padding:5px 10px;
+					transition:$transition_function;
+
+					&:hover{
+						color:$main-site-color;
+					}
+				}
+			}
+		}
+			.sign_up{
+				display:inline-block;
+				color:white;
+				text-transform: uppercase;
+				border:$button_border_width solid $main-site-color;
+				background-color:$main-site-color;
+				border-radius:$button_border_radius;
+				height: 47px;
+    			width: 140px;
+    			position:relative;
+				margin-left:20px;
+				tranition:$transition_function;
+
+				&:hover{
+					background-color:white;
+					color: $button_font_color;
+					transform:scale(1.03);
+				}
+
+				span{
+					position:absolute;
+					top:50%;
+					left:50%;
+					transform:translate(-50%,-50%);
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}
+
+
+
+  @media screen and (max-width: $desktopWidth) {
+nav{
+
+	.content{
+		flex-direction: column;
+		
+		.logo_burger_flex{
+			width:100%;
+			height:80px;
+
+			.burger{
+				display: block;
+			}
+		}
+		.menu_icon{
+			width:100%;
+			display:none;
+			padding:30px 0;
+			flex-direction: column;
+			text-align: center;
+
+			.menu_icon_flex{
+				flex-direction: column;
+
+				li.has_child{
+					position:relative;
+					&:before{
+						content:">";
+						position:absolute;
+						right:-25px;
+						padding:0 10px;
+						transform:translateY(10px);
+						transition:$transition_function;
+					}
+				}
+				li.has_child.rotate{
+					&:before{
+						transform:rotate(90deg) translate(10px,-10px);
+					}
+					ul{
+					position:static;
+					}
+				}
+				li>a{
+					padding:$menu_item_vertical_padding/3 $menu_item_horizontal_padding;
+
+					&:hover{
+						color:currentColor;
+					}
+				}
+				>li>ul{
+					position:relative;
+					border-top:none;
+					display:none;
+
+					>li>a{
+						padding:$menu_item_vertical_padding/4  $menu_item_horizontal_padding;
+					}
+				}
+			}
+			.sign_up{
+				margin-left:0;
+			}
+		}
+	}
+}
+
+}

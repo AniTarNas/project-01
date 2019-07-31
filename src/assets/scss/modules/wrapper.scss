@@ -1,0 +1,511 @@
+body{
+	background:{
+		color:#fafafa;
+		repeat:no-repeat;
+		image: url('../img/Background1.png'),
+				url('../img/Background3.png'),
+				url('../img/Background2.png'),
+				url('../img/Background5.png');
+		position:left top,left 650px,right 35%,bottom center;
+		size:70% auto,20% auto,40% auto, 100% 50%;
+	}
+}
+
+section{
+	margin-bottom:150px;
+}
+
+/*main section css start*/
+section#main{
+	margin-top:150px;
+
+	.content{
+		@include flex_space_between;
+		max-width:1900px;
+		width:90%;
+		margin:auto;
+
+		.all_text{
+			width:54%;
+
+			.title{
+				font-weight:400;
+				position:relative;
+				text-transform: uppercase;
+			    font-size: 48px;
+			    line-height: 1.11;
+			    letter-spacing: 12px;
+			    animation: loading00 1s ease-in-out;
+			}
+			.text{
+				position:relative;
+				font-size: 22px;
+				animation: loading00 1s ease-in-out;
+			}
+			.all_buttons{
+				@include flex_space_around;
+				position:relative;
+				animation: loading01 1s ease-in-out;
+
+				a{
+					margin:5px;
+				}
+			}
+		}
+		.main_image{
+			position:relative;
+			width:43%;
+			animation: loading02 1s ease-in-out;
+		}
+	}	
+}
+
+@keyframes loading00 {
+    from {
+        opacity: 0;
+        left: -300px
+    }
+
+    to {
+        opacity: 1;
+        left: 0
+    }
+}
+
+@keyframes loading01 {
+    from {
+        opacity: 0;
+        bottom: -300px
+    }
+
+    to {
+        opacity: 1;
+        bottom: 0
+    }
+}
+
+@keyframes loading02 {
+    from {
+        opacity: 0;
+        right: -300px
+    }
+
+    to {
+        opacity: 1;
+        right: 0
+    }
+}
+
+/*main section css end*/
+
+/*Section 2 Css start*/
+	.sec2{
+		.content{
+			@include flex_space_around;
+			max-width:1900px;
+			width:90%;
+			margin: auto;
+
+			.one_part{
+				width:30%;
+				max-width:450px;
+				min-width:300px;
+				padding-bottom: 100px;
+				position:relative;
+				
+				&:hover .top .icon{
+					transform:rotate(405deg) translateX(20px)
+				}
+				.top{
+					@include flex_row_nowrap;
+					margin-bottom:30px;
+
+					.icon{
+					transform:rotate(45deg) translateX(20px);
+					margin-right:45px;
+					margin-top:15px;
+					width:100px;
+					min-width:100px;
+					height:100px;
+					display:inline-block;
+					border-radius:15px;
+					position:relative;
+					background-color:white;
+					box-shadow: 0 2px 49px 0 rgba(120,120,120,0.27);
+					transition:$transition_function;
+
+					img{
+						max-width: 50%;
+						height:auto;
+						position:absolute;
+						top:50%;
+						left:50%;
+						transform:translate(-50%,-50%);
+					}
+				}
+				.title{
+					@include flex_itemsCenter;
+					font-weight:normal;
+					font-size:30px;
+					min-height:150px;
+					}
+				}
+				.whiteButton{
+					width:100%;
+					position:absolute;
+					bottom:30px;
+				}
+			}
+		}
+	}
+/*Section 2 CSS end*/
+
+/*Section 3 CSS start*/
+	.sec3{
+		.content{
+			max-width:1300px;
+			width:90%;
+			margin: auto;
+
+			h2{
+				font-family: TitilliumWeb-Bold;
+			    font-size: 48px;
+			    font-weight: bold;
+			   	text-align:center;
+			   	margin:auto;
+			   	max-width:80%;
+			   	margin-bottom:80px;
+			}
+
+			.all_white_card{
+				@include flex_space_between;
+				.white_card{
+					margin: 20px auto;
+				    cursor: context-menu;
+				    padding: 50px 0 20px 0;
+				    border-radius: 7px;
+				    background-color: #f9f9f9;
+				    text-align: center;
+				    width: 370px;
+				    max-width:100%;
+				    box-shadow: 0 15px 45px 0 rgba(134,134,134,0.21);
+				    transition: $transition_function;
+
+				    &:hover{
+				    	box-shadow:0 15px 45px 0 rgba(134,134,134,0.51);
+				    }
+
+				    .green{
+				    	color: #9cb806;
+					    font-family: TitilliumWeb-Bold;
+					    font-size: 63px;
+					    line-height: 1;
+					    margin-bottom:20px;
+				    }
+				    .text{
+				    	width:95%;
+				    	margin:auto;
+						font-size: 14px;
+						line-height: 1.64;
+						color: #808285;
+
+						a{
+							color: #00bbc3;
+    						text-decoration: underline;
+						}
+				    }
+				}
+			}
+		}
+	}
+/*Section 3 CSS end*/
+
+/*Section 4 CSS start*/
+	.sec4{
+		.content{
+			max-width:900px;
+			width:90%;
+			margin:0 auto 70px auto;
+
+			h2{
+				text-align:center;
+				font-size: 48px;
+				margin-bottom:30px;
+			}
+
+			.slider{
+				background-color:#fafafa;
+				padding:20px 0 0 0;
+				border-image-slice: 1;
+				border-style: solid;
+				border-width: 2px;
+				border-image-source: linear-gradient(79deg,#8ead00,#00b396 68%,#00b3b7);
+
+				.slider_content{
+					@include flex_space_around_center;
+
+						img{
+							width:160px;
+							height:160px;
+							border-radius:50%;
+							object-fit: cover;
+						}
+
+						.all_text{
+							width:70%;
+
+							.grey_text{
+								margin-bottom:20px;
+							}
+
+							.blue_text{
+								text-transform:uppercase;
+								font-weight:bold;
+								color:$main-site-color;
+							}
+						}
+					}
+				.lSSlideOuter{
+					overflow: visible;
+					width:90%;
+					margin:auto;
+
+					.lSPager{
+						position:relative;
+						bottom:-50px;
+
+						>li a{
+							width:13px;
+							height:13px;
+							background-color: #13b5b6;
+    						opacity: .25;
+						}
+
+						>li.active a{
+							opacity:0.75;
+						}
+					}
+				}
+			}
+		}
+	}
+	.lSAction>.lSPrev, .lSAction>.lSNext{
+		display:none;
+	}
+/*Section 4 CSS end*/
+
+/*Section 5 CSS start*/
+	.sec5{
+		.content{
+			width:90%;
+			max-width:1900px;
+			margin:auto;
+
+			h2{
+				text-align:center;
+				font-family: TitilliumWeb-Bold;
+				font-size: 48px;
+				font-weight: bold;
+				margin-bottom:50px;
+			}
+
+			.img_flex{
+				@include flex_space_around_center;
+
+				img{
+					margin:20px;
+					width:165px;
+					height: auto;
+				}
+			}
+		}
+	}
+/*Section 5 CSS end*/
+
+/*Section 6 CSS start*/
+	.sec6{
+		.content{
+			text-align:center;
+			width:90%;
+			max-width:440px;
+			margin:auto;
+
+			h2{	
+				text-transform: capitalize;
+				font-family: TitilliumWeb-Bold;
+				font-size: 48px;
+				font-weight: bold;
+				line-height: 1.25;
+				margin-bottom:20px;
+
+				.blue{
+					color:$main-site-color;
+				}
+			}
+
+			h3{
+				font-weight:normal;
+				font-size: 36px;
+				line-height: 1.33;
+				margin-bottom:50px;
+			}
+
+		}
+	}
+/*Section 6 CSS end*/
+
+
+
+/*Media CSS start*/
+
+@media(max-width:$smDesktopWidth){
+
+	/*Section 1 CSS start*/
+	section{
+		margin-bottom:100px;
+	}
+	section#main {
+    	margin-top: 100px;
+
+    	.content{
+    		justify-content:space-around;
+
+    		.all_text{
+    			width:100%;
+    			margin-bottom:50px;
+    		}
+    		.main_image{
+    			width:65%;
+    		}
+    	}
+	}
+	/*Section 1 Css end*/
+
+	/*Section 3 CSS start*/
+	.sec3{
+		.content{
+			h2{
+				margin-bottom:50px;
+			}
+		}
+	}
+	/*Section 3 CSS end*/
+}
+/*-------------------------*/
+
+@media(max-width: $tableWidth){
+	/*Section 2 CSS start*/
+	.sec2{
+		.content{
+			.one_part{
+				width:100%;
+				min-width:100%;
+			}
+		}
+	}
+	/*Section 2 CSS end*/
+	/*Section 4 CSS start*/
+	.sec4{
+		.content{
+			.slider{
+				.slider_content{
+					img{
+						margin-bottom:20px;
+					}
+					.all_text{
+						width:100%;
+					}
+				}
+			}
+		}
+	} 
+	/*Section 4 CSS end*/
+}
+/*--------------------------------------*/
+@media(max-width: $phoneWidth){
+	section{
+		margin-bottom:70px;
+	}
+	/*Section 1 CSS start*/
+	section#main{
+			.content{
+				.all_text{
+					.title{
+						font-size:32px;
+					}
+					.text{
+						font-size:18px;
+					}
+				} 
+			} 
+		} 
+	/*Section 1 CSS end*/
+	/*Section 2 CSS start*/
+	.sec2{
+		.content{
+			.one_part{
+				 .top {
+				 	.title{
+				 		font-size:28px;
+				 	}
+				 }
+			}
+		}
+	} 
+	/*Section 2 CSS end*/
+
+	/*Section 3 CSS start*/
+	.sec3{
+		.content{
+			h2{
+				font-size:28px;
+				margin-bottom: 29px;
+			}
+		}
+	} 
+	/*Section 3 CSS end*/
+
+	/*Section 4 CSS start*/
+	.sec4{
+		margin-bottom:120px;
+		.content{
+			h2{
+				font-size:28px;
+			}
+		}
+	}
+	/*Section 4 CSS end*/
+
+	/*Section 5 CSS start*/
+	.sec5{
+		.content{
+			h2{
+				font-size:28px;
+				margin-bottom: 30px;
+			}
+
+			.img_flex{
+				img{
+					width:100px;
+					margin:15px;
+				}
+			}
+		} 
+	} 
+	/*Section 5 CSS end*/
+
+	/*Section 6 CSS start*/
+	.sec6{
+		.content{
+			h2{
+				font-size:28px;
+			}
+			h3{
+				font-size:24px;
+			}
+		} 
+	} 
+	/*Section 6 CSS end*/
+}
+
+/*Media CSS end*/
