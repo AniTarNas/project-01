@@ -37,7 +37,7 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14",
     "webpack-merge": "^4.2.1",
-    "yarn": "^1.13.0"
+    "yarn": "^1.22.0"
   },
   "dependencies": {
     "lightslider": "^1.1.6",
